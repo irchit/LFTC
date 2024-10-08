@@ -111,7 +111,7 @@
 | #include<stdio.h>  | 29  |
 | "  | 29  |
 
-#### Specificarea in BNF
+#### Gramatica specificata in BNF
 
 ```html
 
