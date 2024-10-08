@@ -123,7 +123,7 @@
 <tip> ::= int | float | string
 <sectiune_cod> ::= <instructiune> | <instructiune> <sectiune_cod>
 <instructiune> ::= <atribuire> | <ciclare> | <conditie> | <intrare> | <iesire> | (\n)* | (\n)* <instructiune>
-<atribuire> ::= <expresie>; <instructiune>
+<atribuire> ::= ID = <expresie>; <instructiune>
 <intrare> ::= scanf("<tip_data_citita>", &ID); <instructiune>
 <iesire> ::= printf("^[a-zA-Z0-9:, \]*$<tip_data_citita>^[a-zA-Z0-9:, \]*$", ID); <instructiune> | printf("^[a-zA-Z0-9:, \]*$<tip_data_citita>^[a-zA-Z0-9:, \]*$<tip_data_citita>^[a-zA-Z0-9:, \]*$", ID, ID); <instructiune> | printf("^[a-zA-Z0-9:, \]*$"); <instructiune>
 <tip_data_citita> ::= %d | %f | %s
@@ -131,6 +131,8 @@
 <ciclare> ::= while(<expresie_conditionala>){ <instructiune> }
 <expresie_conditionala> ::= ID <evaluator> ID | ID
 <evaluator> ::= < | > | <= | >= | != | ==
+<expresie> ::= ID; | ID <semn> <expresie>
+<semn> ::= + | * | / | - | %
 
 
 ```
